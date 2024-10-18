@@ -14,11 +14,11 @@
 
                               #####  PROGRAM START ########
 email = input("Enter an email address to validate: ")
-
+at_index = email.index('@')
 
 if email.count('@') == 1:
 
-     if (at_index := email.index('@')) and email.count('@') == 1:
+     if at_index > 0 and at_index < len(email) - 1:
          if '.' in email[at_index:]:
              if " " not in email:
                  if email[0].isalpha():
